@@ -1,6 +1,6 @@
 package com.example.gestionstock.validator;
 
-import com.example.gestionstock.dto.AdresseDto;
+import com.example.gestionstock.Entities.Adresse;
 import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
@@ -8,7 +8,7 @@ import java.util.List;
 
 public class AdresseValidator {
 
-    public static List<String> validate(AdresseDto adresseDto) {
+    public static List<String> validate(Adresse adresseDto) {
         List<String> errors = new ArrayList<>();
 
         if (adresseDto == null) {

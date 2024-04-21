@@ -44,7 +44,7 @@ public class FournisseurDto {
     private List<CommandeFournisseurDto> commandeFournisseurs;
 
 
-    public static FournisseurDto fromEntity(Fournisseur fournisseur) {
+    public static Fournisseur fromEntity(Fournisseur fournisseur) {
         if (fournisseur == null) {
             return null;
         }
@@ -52,15 +52,15 @@ public class FournisseurDto {
                 .id(fournisseur.getId())
                 .nom(fournisseur.getNom())
                 .prenom(fournisseur.getPrenom())
-                .adresse(AdresseDto.fromEntity(fournisseur.getAdresse()))
+                .adresse(AdresseDto.fromEntity(fournisseur.getAdresse1()))
                 .photo(fournisseur.getPhoto())
-                .mail(fournisseur.getMail())
+                .email(fournisseur.getEmail())
                 .numTel(fournisseur.getNumTel())
                 .idEntreprise(fournisseur.getIdEntreprise())
                 .build();
     }
 
-    public static Fournisseur toEntity(FournisseurDto dto) {
+    public static Fournisseur toEntity(Fournisseur dto) {
         if (dto == null) {
             return null;
         }

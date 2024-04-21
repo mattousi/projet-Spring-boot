@@ -1,7 +1,6 @@
 package com.example.gestionstock.dto;
 
 import com.example.gestionstock.Entities.Adresse;
-import jakarta.persistence.Column;
 import lombok.Builder;
 import lombok.Data;
 
@@ -42,7 +41,7 @@ public class AdresseDto {
                 .build();
     }
 
-    public static Adresse toEntity(AdresseDto adresseDto) {
+    public static Adresse toEntity(Adresse adresseDto) {
         if (adresseDto == null) {
             return null;
         }

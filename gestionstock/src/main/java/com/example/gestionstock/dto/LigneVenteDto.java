@@ -53,7 +53,7 @@ public class LigneVenteDto {
         }
         LigneVente ligneVente = new LigneVente();
         ligneVente.setId(dto.getId());
-        ligneVente.setVentes(VentesDto.toEntity(dto.getVentes()));
+        ligneVente.setVentes(VentesDto.toEntity(VentesDto.fromEntity(dto.getVentes())));
         ligneVente.setArticle(ArticleDto.toEntity(dto.getArticle()));
         ligneVente.setQuantite(dto.getQuantite());
         ligneVente.setPrixUnitaire(dto.getPrixUnitaire());

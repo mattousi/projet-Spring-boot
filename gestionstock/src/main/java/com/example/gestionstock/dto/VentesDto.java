@@ -31,7 +31,7 @@ public class VentesDto {
     private List<LigneVente> ligneVentes;
 
 
-    public static VentesDto fromEntity(Ventes vente) {
+    public static Ventes fromEntity(Ventes vente) {
         if (vente == null) {
             return null;
         }
@@ -43,7 +43,7 @@ public class VentesDto {
                 .build();
     }
 
-    public static Ventes toEntity(VentesDto dto) {
+    public static Ventes toEntity(Ventes dto) {
         if (dto == null) {
             return null;
         }

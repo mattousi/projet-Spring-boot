@@ -1,5 +1,6 @@
 package com.example.gestionstock.validator;
 
+import com.example.gestionstock.dto.AdresseDto;
 import com.example.gestionstock.dto.FournisseurDto;
 import org.springframework.util.StringUtils;
 
@@ -31,7 +32,7 @@ public class FournisseurValidator {
         if (!StringUtils.hasLength(dto.getNumTel())) {
             errors.add("Veuillez renseigner le numero de telephone du fournisseur");
         }
-        errors.addAll(AdresseValidator.validate(dto.getAdresse()));
+        errors.addAll(AdresseValidator.validate(AdresseDto.fromEntity(dto.getAdresse())));
         return errors;
     }
 

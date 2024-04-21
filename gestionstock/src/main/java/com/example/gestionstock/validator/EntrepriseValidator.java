@@ -36,7 +36,7 @@ public class EntrepriseValidator {
             errors.add("Veuillez reseigner le numero de telephone de l'entreprise");
         }
 
-        errors.addAll(AdresseValidator.validate(dto.getAdresse()));
+        errors.addAll(AdresseValidator.validate(dto.getAdresse1()));
         return errors;
     }
 }

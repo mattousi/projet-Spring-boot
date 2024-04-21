@@ -1,10 +1,6 @@
 package com.example.gestionstock.dto;
 
 import com.example.gestionstock.Entities.Article;
-import com.example.gestionstock.Entities.Category;
-import jakarta.persistence.Column;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import lombok.Builder;
 import lombok.Data;
 
@@ -40,7 +36,7 @@ public class ArticleDto {
     private CategoryDto category ;
 
 
-    public static ArticleDto fromEntity(Article article) {
+    public static Article fromEntity(Article article) {
         if (article == null) {
             return null;
         }
@@ -57,7 +53,7 @@ public class ArticleDto {
                 .build();
     }
 
-    public static Article toEntity(ArticleDto articleDto) {
+    public static Article toEntity(Article articleDto) {
         if (articleDto == null) {
             return null;
         }
